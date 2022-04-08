@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>messages</title>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+	<th>firstname</th>
+	<th>lastname</th>
+	<th>email</th>
+	<th>message</th>
+    </tr>
+    {% for msg in messages %}
+	<tr>
+	    <td>{{msg.firstname}}</td>
+	    <td>{{msg.lastname}}</td>
+	    <td>{{msg.email}}</td>
+	    <td>{{msg.message}}</td>
+	</tr> 
+    {% endfor %}
+</table>
+
+{% endblock %}
